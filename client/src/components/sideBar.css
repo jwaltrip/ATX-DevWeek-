@@ -1,0 +1,42 @@
+.wrapper{
+position:absolute;
+left:0;
+top:0;
+height:100%;
+width:15vw;
+display: inline-block;
+}
+
+.sideBar{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  background:#141414;
+  height:100%;
+}
+.list-item-group{
+display:flex;
+flex-direction: column;
+list-style-type: none;
+font-style: italic;
+font-size:1em;
+}
+.list-item{
+margin:1em;
+padding:1em;
+}
+.list-item:hover{
+  background:#222222;
+}
+i{
+  color:white;
+}
+a{
+  color:white;
+}
+a:hover{
+  color:white;
+  text-decoration: none;
+  
+}

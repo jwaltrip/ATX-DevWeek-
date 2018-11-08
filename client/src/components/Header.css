@@ -1,0 +1,14 @@
+.navbar{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding:2.5em;
+  color:white;
+  text-align: center;
+background:#222222;
+border:0;
+
+}
+.HD{
+  letter-spacing: .5em;
+}
