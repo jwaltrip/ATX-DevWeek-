@@ -18,6 +18,7 @@ class Cards extends Component {
     this.getFixesByName = this.getFixesByName.bind(this);
     this.showChecklistView = this.showChecklistView.bind(this);
     this.listChecklistCards = this.listChecklistCards.bind(this);
+    this.showProblemCards = this.showProblemCards.bind(this);
   }
 
   getFixesByName(problemName) {
@@ -27,6 +28,12 @@ class Cards extends Component {
   showChecklistView(problem) {
     if (this.state.showProblemCards) {
       this.setState({ showProblemCards: !this.state.showProblemCards, currentProblem: problem });
+    }
+  }
+
+  showProblemCards() {
+    if (!this.state.showProblemCards) {
+      this.setState({ showProblemCards: !this.state.showProblemCards });
     }
   }
 
@@ -72,7 +79,7 @@ class Cards extends Component {
     if (!this.state.showProblemCards) {
       gridClass += ' hide';
     }
-
+    // logic to show/hide checklist grid
     let checklistClass = 'checklist';
     if (!this.state.showProblemCards) {
       checklistClass =+ ' show';
@@ -89,6 +96,7 @@ class Cards extends Component {
         </div>
 
         <div className={checklistClass}>
+          <i className="fas fa-arrow-circle-left fa-7x back-button" onClick={this.showProblemCards}> </i>
           <Grid>
             <Row className="show-grid">
               <h1 className="checklist-title">{this.state.currentProblem} - Checklist</h1>
