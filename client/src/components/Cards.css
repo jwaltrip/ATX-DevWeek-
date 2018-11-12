@@ -18,3 +18,20 @@ box-shadow: 2px 7px 16px -3px rgba(0,0,0,0.75);
 transition: all .2s ease-in-out; 
 }
 .cards:hover { transform: scale(1.1); }
+
+.hide {
+  display: none;
+}
+
+.checklist {
+  display: none;
+}
+
+.checklist.show {
+  display: inline-block;
+}
+
+.checklist-title {
+  text-align: center;
+  padding-bottom: 15px;
+}

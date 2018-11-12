@@ -13,13 +13,29 @@ import SideBar from "./components/SideBar";
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("/data")
+      .then(res => res.json())
+      .then(data => {
+        this.setState({ data });
+      });
+  }
+
   render() {
     return (
       <div className="App">
-      <Header/>
-      {/* <Information/> */}
-      <SideBar/>
-      <Cards/>
+        <Header/>
+        {/* <Information/> */}
+        <SideBar/>
+        <Cards problems={this.state.data} />
       
       </div>
     );
